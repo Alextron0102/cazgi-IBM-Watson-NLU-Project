@@ -2,8 +2,8 @@ const express = require('express');
 const dotenv = require('dotenv');
 dotenv.config();
 function getNLUInstance(){
-    let api_key = process.env.API_KEY ? process.env.API_KEY : process.env.apikey;
-    let api_url = process.env.API_URL ? process.env.API_URL : process.env.url;
+    let api_key = process.env.apikey;
+    let api_url = process.env.url;
     const NaturalLanguagegetUnderstandingV1=require('ibm-watson/natural-language-understanding/v1');
     const {IamAuthenticator} = require('ibm-watson/auth');
     const naturalLanguageUnderstanding = new NaturalLanguagegetUnderstandingV1({
